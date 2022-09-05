@@ -5,6 +5,7 @@ let menuSchema = new schema({
     name: {type:String, require:true},
     icon: {type:String, require:true},
     menuUrl: {type:String, require:true},
+    favorites:{type:String,require: false},
     entryDate: {type:Date, default:Date.now}
 });
 

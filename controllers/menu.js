@@ -49,6 +49,7 @@ module.exports = {
             let menuName = req.body.menuName;
             let menuIcon = req.body.menuIcon;
             let menuUrl = req.body.menuUrl;
+            let menuFavs = req.body.favorites;
             let menu = schemas.menu;
     
             let qry = {_id:menuId};
@@ -57,7 +58,8 @@ module.exports = {
                 $set: {
                     name: menuName,
                     icon: menuIcon,
-                    menuUrl: menuUrl
+                    menuUrl: menuUrl,
+                    favorites: menuFavs,
                 }
             }
     
@@ -77,6 +79,7 @@ module.exports = {
             let menuName = req.body.menuName;
             let menuIcon = req.body.menuIcon;
             let menuUrl = req.body.menuUrl;
+            let menuFavs = req.body.favorites;
             //let userId = req.user.id
             let menu = schemas.menu;
     
@@ -89,7 +92,8 @@ module.exports = {
                     let newMenu = new schemas.menu({
                         name: menuName,
                         icon: menuIcon,
-                        menuUrl: menuUrl
+                        menuUrl: menuUrl,
+                        favorites: menuFavs
                     });
     
                     let saveMenu = await newMenu.save();
