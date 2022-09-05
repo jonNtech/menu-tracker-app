@@ -49,7 +49,7 @@ module.exports = {
             let menuName = req.body.menuName;
             let menuIcon = req.body.menuIcon;
             let menuUrl = req.body.menuUrl;
-            let menuFavs = req.body.favorites;
+            let menuFavs = req.body.menuFavs;
             let menu = schemas.menu;
     
             let qry = {_id:menuId};
@@ -79,7 +79,7 @@ module.exports = {
             let menuName = req.body.menuName;
             let menuIcon = req.body.menuIcon;
             let menuUrl = req.body.menuUrl;
-            let menuFavs = req.body.favorites;
+            let menuFavs = req.body.menuFavs;
             //let userId = req.user.id
             let menu = schemas.menu;
     

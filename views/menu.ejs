@@ -3,7 +3,7 @@
 <% if (error != '') { %>
     <%= error %>
 <% } else { %>
-<h2 class="page-title">New Menujon jonjon</h2>
+<h2 class="page-title">edit Menu</h2>
 <form action="/menu/save" method="POST">
     <div class="menu-edit">
         <div class="menu-name">
@@ -17,7 +17,7 @@
             <input type="text" name="menuUrl" value="<%= item[0].menuUrl %>">
         </div>
         <div class="menu-favorites">
-            <input type="text" name="menuFavs" value="<%= item[0].favorites %>">
+            <input type="text" name="menuFavs" placeholder="favorite food" value="<%= item[0].favorites %>">
         </div>
         <div class="menu-btn">
             <button type="submit" class="btn btn-primary">Save</button>
