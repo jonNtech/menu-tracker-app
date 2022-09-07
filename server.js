@@ -15,7 +15,7 @@ const loginRouter = require('./routes/login')
 require('dotenv').config({path:'./config/.env'})
 
 // Passport config
-//require('./config/passport')(passport)
+require('./config/passport')(passport)
 
 connectDB()
 
